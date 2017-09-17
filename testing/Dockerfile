@@ -26,8 +26,8 @@ COPY root /
 RUN set -x \
     && groupadd -r mongodb -g 998 \
     && useradd --no-log-init -r -u 998 -g 998 mongodb \
-    && groupadd -r unifi -g 999 \
-    && useradd --no-log-init -r -u 999 -g 999 unifi \
+    && groupadd -r unifi -g 100 \
+    && useradd --no-log-init -r -u 1026 -g 100 unifi \
     && mkdir /usr/share/man/man1 \
     && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 > /dev/null \
     && echo "deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen" \
